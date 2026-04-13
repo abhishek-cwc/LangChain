@@ -14,6 +14,7 @@ while True:
         break;
 
     chatHistory.append(HumanMessage(content = user_input))
+    #ChatOpenAI replace invoke
     result = model.invoke_llm_with_meesage(chatHistory)
     chatHistory.append(AIMessage(content = result) )
 
