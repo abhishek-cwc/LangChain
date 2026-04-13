@@ -73,3 +73,26 @@ class GitHubLLM:
 
         # ✅ final output
         return response.json()["choices"][0]["message"]["content"]
+    
+
+    def invoke_prompt(self, prompt):
+        # Convert PromptTemplate output → string
+        text = prompt.to_string()
+
+        payload = {
+            "model": self.model,
+            "messages": [
+                {"role": "user", "content": text}
+            ],
+            "temperature": self.temperature,
+            "max_completion_tokens": self.max_completion_tokens
+        }
+
+        print("\n✅ FINAL PAYLOAD:\n", payload)
+
+        response = requests.post(self.url, headers=self.headers, json=payload)
+
+        if response.status_code != 200:
+            return f"Error {response.status_code}: {response.text}"
+
+        return response.json()["choices"][0]["message"]["content"]
