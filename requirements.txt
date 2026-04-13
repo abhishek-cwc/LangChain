@@ -2,13 +2,13 @@
 langchain
 langchain-core
 
-# OpenAi Integration
+# OpenAI Integration
 langchain-openai
 openai
 
-# Envoirment Variable Management
+# Environment Variable Management
 python-dotenv
 
-# Machine Lerning Utility
+# Machine Learning Utility
 numpy
 scikit-learn
