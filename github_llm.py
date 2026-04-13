@@ -16,6 +16,40 @@ class GitHubLLM:
             "Content-Type": "application/json"
         }
 
+    
+    def invoke_llm_with_meesage(self, messages):
+        role_map = {
+            "SystemMessage": "system",
+            "HumanMessage": "user",
+            "AIMessage": "assistant"
+        }
+
+        formatted_messages = []
+
+        for msg in messages:
+            role = role_map.get(msg.__class__.__name__)
+            if role:
+                formatted_messages.append({
+                    "role": role,
+                    "content": msg.content
+                })
+
+        payload = {
+            "model": self.model,
+            "messages": formatted_messages,
+            "temperature": self.temperature,
+            "max_completion_tokens": self.max_completion_tokens
+        }
+
+        print("\n✅ FINAL PAYLOAD:\n", payload)  # debug
+
+        response = requests.post(self.url, headers=self.headers, json=payload)
+
+        if response.status_code != 200:
+            return f"Error {response.status_code}: {response.text}"
+
+        return response.json()["choices"][0]["message"]["content"]
+
     def invoke(self, prompt):
         payload = {
             "model": self.model,
