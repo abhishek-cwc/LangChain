@@ -16,6 +16,9 @@ langchain-groq
 # Environment Variable Management
 python-dotenv
 
+#data validation
+pydantic
+
 # Machine Learning Utility
 numpy
 scikit-learn
