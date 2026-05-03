@@ -24,3 +24,11 @@ pydantic
 # Machine Learning Utility
 numpy
 scikit-learn
+
+###
+langchain-ollama
+langchain-chroma
+
+###
+#sentence-transformers
+
