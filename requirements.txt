@@ -29,6 +29,9 @@ scikit-learn
 langchain-ollama
 langchain-chroma
 
+##retrievers
+wikipedia
+
 ###
 #sentence-transformers
 

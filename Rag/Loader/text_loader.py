@@ -6,8 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-
 parser = StrOutputParser()
 
 loader = TextLoader("abc.txt")
