@@ -3,5 +3,6 @@ __pycache__/
 *.pyc
 venv/
 aa.txt
-Rag/Vector/my_chroma_db/*
+# Chroma vector DB
+Rag/Vector/my_chroma_db/
 template.json
