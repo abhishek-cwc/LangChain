@@ -7,6 +7,7 @@ docs = loader.load()
 
 print(docs[1].page_content)
 
+##### directory and Lazy Loading #####
 # loader = DirectoryLoader(
 #     path='books',
 #     glob='*.pdf',
@@ -18,6 +19,8 @@ print(docs[1].page_content)
 # for document in docs:
 #     print(document.metadata)
 
+
+##### Web base Loader  ####
 # url = 'https://www.abc.com/apple-macbook-air-m2-16-gb-256-gb-ssd-macos-sequoia-mc7x4hn-a/p/itmdc5308fa78421'
 # loader = WebBaseLoader(url)
 
