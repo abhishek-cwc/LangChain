@@ -17,15 +17,15 @@ vector_store = Chroma(
 #     #print(r.page_content)
 #     print(r.metadata)
 
-data = vector_store.get(include=['embeddings', 'documents', 'metadatas'])
+# data = vector_store.get(include=['embeddings', 'documents', 'metadatas'])
 
-print(data)
+# print(data)
 
-for i in range(len(data['ids'])):
-    print(f"ID: {data['ids'][i]}")
-    print(f"Text: {data['documents'][i][:60]}...")
-    print(f"Team: {data['metadatas'][i]['team']}")
-    print("-"*40)
+# for i in range(len(data['ids'])):
+#     print(f"ID: {data['ids'][i]}")
+#     print(f"Text: {data['documents'][i][:60]}...")
+#     print(f"Team: {data['metadatas'][i]['team']}")
+#     print("-"*40)
 
 # data = vector_store.get(ids=["2"])
 
@@ -47,3 +47,26 @@ for i in range(len(data['ids'])):
 # vector_store.add_documents([new_doc], ids=["5"])
 
 # print(data)
+
+
+data = vector_store.similarity_search(
+    query='Who among these are a bowler?',
+    k=2
+)
+
+print(data)
+
+
+print("-----");
+
+data = vector_store.similarity_search_with_score(
+    query="Who among these are a bowler?",
+    k=2
+)
+
+print(data)
+
+
+for doc, score in data:
+    print(score, "→", doc.page_content)
+
