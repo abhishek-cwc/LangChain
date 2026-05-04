@@ -1,37 +1,28 @@
-# LangChain Core
-langchain
-langchain-core
-langchain-community
-langchain-experimental
+# LangChain (LOCKED)
+langchain==0.2.14
+langchain-core==0.2.32
+langchain-community==0.2.12
 
-# OpenAI Integration
+# Integrations
 langchain-openai
-openai
-
-# Anthropic Integration
-langchain-anthropic
-anthropic
-
-# groq Integration
 langchain-groq
-
-# Environment Variable Management
-python-dotenv
-
-#data validation
-pydantic
-
-# Machine Learning Utility
-numpy
-scikit-learn
-
-###
+langchain-anthropic
 langchain-ollama
 langchain-chroma
 
-##retrievers
+# LLM APIs
+openai
+anthropic
+
+# Utils
+python-dotenv
+
+# Data validation (IMPORTANT)
+pydantic==1.10.13
+
+# ML
+numpy
+scikit-learn
+
+# Retrievers
 wikipedia
-
-###
-#sentence-transformers
-
