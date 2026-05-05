@@ -61,7 +61,7 @@ for tool_call in ai_message.tool_calls:
 
 print(messages)
 
-final_re = llm_with_tools.invoke(messages).content
+final_re = llm_with_tools.invoke(messages)
 
-print(final_re)
+print(final_re.content)
  
