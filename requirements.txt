@@ -29,3 +29,7 @@ wikipedia
 
 ####
 youtube-transcript-api
+
+## tools
+duckduckgo-search
+langchain_experimental
