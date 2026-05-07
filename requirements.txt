@@ -33,3 +33,5 @@ youtube-transcript-api
 ## tools
 duckduckgo-search
 langchain_experimental
+
+langgraph==0.2.5
