@@ -1,7 +1,10 @@
-# LangChain (LOCKED)
-langchain==0.2.14
-langchain-core==0.2.32
-langchain-community==0.2.12
+# LangChain Core Stack
+langchain==0.3.25
+langchain-core==0.3.59
+langchain-community==0.3.24
+
+# LangGraph
+langgraph==0.2.67
 
 # Integrations
 langchain-openai
@@ -17,8 +20,8 @@ anthropic
 # Utils
 python-dotenv
 
-# Data validation (IMPORTANT)
-pydantic==1.10.13
+# Data validation
+pydantic>=2.7,<3
 
 # ML
 numpy
@@ -27,11 +30,9 @@ scikit-learn
 # Retrievers
 wikipedia
 
-####
+# Media
 youtube-transcript-api
 
-## tools
+# Tools
 duckduckgo-search
-langchain_experimental
-
-langgraph==0.2.5
+langchain-experimental
